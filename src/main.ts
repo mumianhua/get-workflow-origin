@@ -97,7 +97,7 @@ async function getOrigin(
     run_id: runId
   })
   const sourceRun = reply.data
-  core.debug(JSON.stringify(reply.data))
+  core.info(JSON.stringify(reply.data))
   core.info(
     `Source workflow: Head repo: ${sourceRun.head_repository.full_name}, ` +
       `Head branch: ${sourceRun.head_branch} ` +
@@ -173,7 +173,9 @@ async function run(): Promise<void> {
     targetBranch,
     pullRequest
   ] = await getOrigin(octokit, sourceRunId, owner, repo)
-
+  core.info('------pull request-11111-----')
+  core.info(JSON.stringify(pullRequest))
+  core.info('------pull request-22222----')
   verboseOutput('sourceHeadRepo', headRepo)
   headBranch && verboseOutput('sourceHeadBranch', headBranch)
   verboseOutput('sourceHeadSha', headSha)
