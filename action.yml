@@ -1,4 +1,4 @@
-name: 'Get Workflow Origin'
+name: 'mumianhua Get Workflow Origin'
 description: 'Gets origin of Workflow Runs.'
 author: 'potiuk'
 inputs:
